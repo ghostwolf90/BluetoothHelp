@@ -12,6 +12,9 @@
 		3FAD0B11209ED0570004AC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD0B0F209ED0570004AC50 /* Main.storyboard */; };
 		3FAD0B13209ED0580004AC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD0B12209ED0580004AC50 /* Assets.xcassets */; };
 		3FAD0B16209ED0580004AC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FAD0B14209ED0580004AC50 /* LaunchScreen.storyboard */; };
+		3FAD0B1E209ED07B0004AC50 /* BluetoothHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0B1D209ED07B0004AC50 /* BluetoothHelp.swift */; };
+		3FAD0B29209FEBEA0004AC50 /* libACSBluetooth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAD0B23209FEBEA0004AC50 /* libACSBluetooth.a */; };
+		3FAD0B30209FF11B0004AC50 /* ABDHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD0B2F209FF11B0004AC50 /* ABDHex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,17 @@
 		3FAD0B12209ED0580004AC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FAD0B15209ED0580004AC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FAD0B17209ED0580004AC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FAD0B1D209ED07B0004AC50 /* BluetoothHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelp.swift; sourceTree = "<group>"; };
+		3FAD0B22209FEBEA0004AC50 /* ABTAcr1255uj1Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTAcr1255uj1Reader.h; sourceTree = "<group>"; };
+		3FAD0B23209FEBEA0004AC50 /* libACSBluetooth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libACSBluetooth.a; sourceTree = "<group>"; };
+		3FAD0B24209FEBEA0004AC50 /* ABTAcr3901us1Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTAcr3901us1Reader.h; sourceTree = "<group>"; };
+		3FAD0B25209FEBEA0004AC50 /* ABTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTError.h; sourceTree = "<group>"; };
+		3FAD0B26209FEBEA0004AC50 /* ABTBluetoothReaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTBluetoothReaderManager.h; sourceTree = "<group>"; };
+		3FAD0B27209FEBEA0004AC50 /* ACSBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSBluetooth.h; sourceTree = "<group>"; };
+		3FAD0B28209FEBEA0004AC50 /* ABTBluetoothReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTBluetoothReader.h; sourceTree = "<group>"; };
+		3FAD0B2A209FEBFE0004AC50 /* BluetoothHelp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BluetoothHelp-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FAD0B2E209FF11A0004AC50 /* ABDHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDHex.h; sourceTree = "<group>"; };
+		3FAD0B2F209FF11B0004AC50 /* ABDHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDHex.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAD0B29209FEBEA0004AC50 /* libACSBluetooth.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +69,33 @@
 		3FAD0B0A209ED0570004AC50 /* BluetoothHelp */ = {
 			isa = PBXGroup;
 			children = (
+				3FAD0B21209FEBEA0004AC50 /* ACSBluetooth */,
+				3FAD0B1D209ED07B0004AC50 /* BluetoothHelp.swift */,
 				3FAD0B0B209ED0570004AC50 /* AppDelegate.swift */,
 				3FAD0B0D209ED0570004AC50 /* ViewController.swift */,
 				3FAD0B0F209ED0570004AC50 /* Main.storyboard */,
 				3FAD0B12209ED0580004AC50 /* Assets.xcassets */,
 				3FAD0B14209ED0580004AC50 /* LaunchScreen.storyboard */,
 				3FAD0B17209ED0580004AC50 /* Info.plist */,
+				3FAD0B2A209FEBFE0004AC50 /* BluetoothHelp-Bridging-Header.h */,
 			);
 			path = BluetoothHelp;
+			sourceTree = "<group>";
+		};
+		3FAD0B21209FEBEA0004AC50 /* ACSBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				3FAD0B23209FEBEA0004AC50 /* libACSBluetooth.a */,
+				3FAD0B26209FEBEA0004AC50 /* ABTBluetoothReaderManager.h */,
+				3FAD0B28209FEBEA0004AC50 /* ABTBluetoothReader.h */,
+				3FAD0B22209FEBEA0004AC50 /* ABTAcr1255uj1Reader.h */,
+				3FAD0B24209FEBEA0004AC50 /* ABTAcr3901us1Reader.h */,
+				3FAD0B25209FEBEA0004AC50 /* ABTError.h */,
+				3FAD0B27209FEBEA0004AC50 /* ACSBluetooth.h */,
+				3FAD0B2E209FF11A0004AC50 /* ABDHex.h */,
+				3FAD0B2F209FF11B0004AC50 /* ABDHex.m */,
+			);
+			path = ACSBluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +130,7 @@
 				TargetAttributes = {
 					3FAD0B07209ED0570004AC50 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -137,6 +172,8 @@
 			files = (
 				3FAD0B0E209ED0570004AC50 /* ViewController.swift in Sources */,
 				3FAD0B0C209ED0570004AC50 /* AppDelegate.swift in Sources */,
+				3FAD0B1E209ED07B0004AC50 /* BluetoothHelp.swift in Sources */,
+				3FAD0B30209FF11B0004AC50 /* ABDHex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VS4GFB76H;
 				INFOPLIST_FILE = BluetoothHelp/Info.plist;
@@ -287,8 +325,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BluetoothHelp/ACSBluetooth",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.laibit.BluetoothHelp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BluetoothHelp/BluetoothHelp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VS4GFB76H;
 				INFOPLIST_FILE = BluetoothHelp/Info.plist;
@@ -305,8 +350,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BluetoothHelp/ACSBluetooth",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.laibit.BluetoothHelp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BluetoothHelp/BluetoothHelp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
