@@ -37,7 +37,7 @@ class BluetoothHelp: NSObject, CBCentralManagerDelegate {
     var manager : CBCentralManager!
     var connectedPerpheral:CBPeripheral!
     
-    let bluetoothReaderManager = ABTBluetoothReaderManager()
+    var bluetoothReaderManager = ABTBluetoothReaderManager()
     var bluetoothReader = ABTBluetoothReader()
     var senseCardType = CardType.none
     var masterKey:Data = Data()
@@ -211,7 +211,8 @@ extension BluetoothHelp: ABTBluetoothReaderManagerDelegate, ABTBluetoothReaderDe
             //[self ABD_showError:error];
             return
         }
-        bluetoothReader.authenticate(withMasterKey: masterKey)
+        print(masterKey)
+        self.bluetoothReader.authenticate(withMasterKey: masterKey)
     }
     
     func bluetoothReader(_ bluetoothReader: ABTBluetoothReader!, didChangeBatteryStatus batteryStatus: UInt, error: Error!) {

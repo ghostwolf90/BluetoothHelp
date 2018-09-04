@@ -3,4 +3,7 @@
 //
 #import "ABTBluetoothReaderManager.h"
 #import "ABTBluetoothReader.h"
+#import "ABTAcr3901us1Reader.h"
+#import "ABTAcr1255uj1Reader.h"
 #import "ABDHex.h"
+#import "ABTError.h"
