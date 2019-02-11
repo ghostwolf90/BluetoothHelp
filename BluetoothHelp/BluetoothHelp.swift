@@ -36,13 +36,14 @@ class BluetoothHelp: NSObject, CBCentralManagerDelegate {
     
     var manager : CBCentralManager!
     var connectedPerpheral:CBPeripheral!
+    var discoveredPeripherals = [CBPeripheral]()
     
     var bluetoothReaderManager = ABTBluetoothReaderManager()
     var bluetoothReader = ABTBluetoothReader()
     var senseCardType = CardType.none
-    var masterKey:Data = Data()
-    var commandApdu:Data = Data()
-    var escapeCommand:Data = Data()
+    var masterKey = Data()
+    var commandApdu = Data()
+    var escapeCommand = Data()
     
     private let acr1311u = "ACR1311U"
     private let acr1255u = "ACR1255U"
@@ -60,7 +61,7 @@ class BluetoothHelp: NSObject, CBCentralManagerDelegate {
     func isInitCBCentralManager(isInit:Bool){
         if isInit{
             if manager == nil {
-                manager = CBCentralManager.init(delegate: self, queue: DispatchQueue.main)
+                manager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
             }
         }        
     }
@@ -110,7 +111,17 @@ extension BluetoothHelp: CBPeripheralDelegate{
             return
         }
         
-        self.delegate?.bluetoothHelp(didDiscover: peripheral, rssi: RSSI)
+        var isExisted = false
+        for aPeripheral in discoveredPeripherals {
+            if (aPeripheral.identifier == peripheral.identifier){
+                isExisted = true
+            }
+        }
+        
+        if !isExisted{
+            discoveredPeripherals.append(peripheral)
+            self.delegate?.bluetoothHelp(didDiscover: peripheral, rssi: RSSI)
+        }
     }
     
     func connectPeripheral(peripheral:CBPeripheral){
@@ -212,7 +223,7 @@ extension BluetoothHelp: ABTBluetoothReaderManagerDelegate, ABTBluetoothReaderDe
             return
         }
         print(masterKey)
-        self.bluetoothReader.authenticate(withMasterKey: masterKey)
+        bluetoothReader.authenticate(withMasterKey: masterKey)
     }
     
     func bluetoothReader(_ bluetoothReader: ABTBluetoothReader!, didChangeBatteryStatus batteryStatus: UInt, error: Error!) {

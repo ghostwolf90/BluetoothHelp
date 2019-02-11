@@ -70,8 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				3FAD0B21209FEBEA0004AC50 /* ACSBluetooth */,
-				3FAD0B1D209ED07B0004AC50 /* BluetoothHelp.swift */,
 				3FAD0B0B209ED0570004AC50 /* AppDelegate.swift */,
+				3FAD0B1D209ED07B0004AC50 /* BluetoothHelp.swift */,
 				3FAD0B0D209ED0570004AC50 /* ViewController.swift */,
 				3FAD0B0F209ED0570004AC50 /* Main.storyboard */,
 				3FAD0B12209ED0580004AC50 /* Assets.xcassets */,
